@@ -1,18 +1,30 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/images-removebg-preview.png'
 import { FaUserAlt } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext);
     const navOption = <>
     <li><Link>Home</Link></li>
     <li><Link>Instructors</Link></li>
     <li><Link>Classes</Link></li>
-    <li><Link>Dashboard</Link></li>
-    
     </>
+
+    const handleLogout = () => {
+        logOut()
+        .then(() => {
+
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
     return (
-       <div className="max-w-7xl mx-auto">
-         <div className="navbar bg-base-100">
+       <div className=" mx-auto">
+         <div className="navbar fixed bg-black bg-opacity-20 text-white font-bold z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,7 +34,8 @@ const Navbar = () => {
                       {navOption}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">
+                <a className="btn btn-ghost normal-case text-xl -mt-3">
+                    <p>Spiritual Home</p>
                     <img style={{height: '70px', width: '70px'}} src={logo} alt="" />
                 </a>
             </div>
@@ -31,8 +44,16 @@ const Navbar = () => {
                     {navOption}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn"><FaUserAlt></FaUserAlt></a>
+            <div className="navbar-end ">
+                {
+                    user ? <>
+                    <Link className="mr-2">Dashboard</Link>
+                    <a className="btn"><FaUserAlt></FaUserAlt></a>
+                    <Link><button onClick={handleLogout} className="btn btn-ghost btn-sm">Logout</button></Link>
+                    </> : 
+                   <Link to='/login'> <button className="btn btn-ghost btn-sm">Login</button></Link>
+                }
+                
                 {/* <img style={{widows: '20px', height: '20px'}} src= alt="" /> */}
             </div>
         </div>
