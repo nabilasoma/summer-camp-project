@@ -4,6 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { FaEye, FaEyeSlash, FaRegEyeSlash } from "react-icons/fa";
+import Social from "../../components/Social/Social";
 
 
 const Login = () => {
@@ -90,7 +91,7 @@ const Login = () => {
                     </form>
 
                     <p><small>New to this site? Please</small><Link to='/registration'><small>Registration</small></Link></p>
-
+                    <Social></Social>
                 </div>
             </div>
         </div>

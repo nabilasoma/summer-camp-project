@@ -4,10 +4,10 @@ import { Carousel } from 'react-responsive-carousel';
 const Slider = () => {
     return (
         <Carousel>
-                <div>
+                {/* <div>
                     <img src="https://i.ibb.co/yqLDyLg/slider3.jpg" />
                     {/* <p className="legend">Legend 1</p> */}
-                </div>
+                {/* </div> */} 
                 <div>
                     <img src="https://i.ibb.co/8cRzGtr/slider1.jpg" />
                     {/* <p className="legend">Legend 2</p> */}

@@ -1,0 +1,62 @@
+[
+    {
+      "image": "https://example.com/instructor1.jpg",
+      "name": "John Smith",
+      "email": "johnsmith@example.com"
+    },
+    {
+      "image": "https://example.com/instructor2.jpg",
+      "name": "Emily Johnson",
+      "email": "emilyjohnson@example.com"
+    },
+    {
+      "image": "https://example.com/instructor3.jpg",
+      "name": "Michael Davis",
+      "email": "michaeldavis@example.com"
+    },
+    {
+      "image": "https://example.com/instructor4.jpg",
+      "name": "Sarah Thompson",
+      "email": "sarahthompson@example.com"
+    },
+    {
+      "image": "https://example.com/instructor5.jpg",
+      "name": "David Wilson",
+      "email": "davidwilson@example.com"
+    },
+    {
+      "image": "https://example.com/instructor6.jpg",
+      "name": "Jennifer Miller",
+      "email": "jennifermiller@example.com"
+    },
+    {
+      "image": "https://example.com/instructor7.jpg",
+      "name": "Matthew Brown",
+      "email": "matthewbrown@example.com"
+    },
+    {
+      "image": "https://example.com/instructor8.jpg",
+      "name": "Olivia Garcia",
+      "email": "oliviagarcia@example.com"
+    },
+    {
+      "image": "https://example.com/instructor9.jpg",
+      "name": "Daniel Rodriguez",
+      "email": "danielrodriguez@example.com"
+    },
+    {
+      "image": "https://example.com/instructor10.jpg",
+      "name": "Sophia Martinez",
+      "email": "sophiamartinez@example.com"
+    },
+    {
+      "image": "https://example.com/instructor11.jpg",
+      "name": "William Lee",
+      "email": "williamlee@example.com"
+    },
+    {
+      "image": "https://i.ibb.co/YLRS8Qb/instructor1.jpg",
+      "name": "Ava Taylor",
+      "email": "avataylor@example.com"
+    }
+  ]

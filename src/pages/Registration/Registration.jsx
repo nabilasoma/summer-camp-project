@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from 'sweetalert2'
+import Social from "../../components/Social/Social";
 
 
 
@@ -99,7 +100,7 @@ const Registration = () => {
                         </form>
 
                         <p><small>Already have an account? Please</small><Link to='/login'><small>Login</small></Link></p>
-                        
+                        <Social></Social>
                     </div>
                 </div>
             </div>
