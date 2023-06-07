@@ -9,7 +9,7 @@ const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
     const navOption = <>
     <li><Link>Home</Link></li>
-    <li><Link>Instructors</Link></li>
+    <li><Link to='/instructor'>Instructors</Link></li>
     <li><Link>Classes</Link></li>
     </>
 
