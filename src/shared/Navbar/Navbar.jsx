@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/images-removebg-preview.png'
+import { FaUserAlt } from 'react-icons/fa';
 
 const Navbar = () => {
     const navOption = <>
@@ -31,7 +32,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn"><FaUserAlt></FaUserAlt></a>
+                {/* <img style={{widows: '20px', height: '20px'}} src= alt="" /> */}
             </div>
         </div>
        </div>
