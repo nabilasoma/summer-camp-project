@@ -1,83 +1,83 @@
 [
     {
-      "image": "https://example.com/course1.jpg",
+      "image": "https://i.ibb.co/TK2486J/class1.jpg",
       "name": "Hatha Yoga",
       "instructor": "John Smith",
       "seats": 15,
       "price": 50
     },
     {
-      "image": "https://example.com/course2.jpg",
+      "image": "https://i.ibb.co/qMZ3sKq/approve7.jpg",
       "name": "Vinyasa Flow",
       "instructor": "Emily Johnson",
       "seats": 12,
       "price": 60
     },
     {
-      "image": "https://example.com/course3.jpg",
+      "image": "https://i.ibb.co/tmLC5T0/approve10.jpg",
       "name": "Ashtanga Yoga",
       "instructor": "Michael Davis",
       "seats": 10,
       "price": 55
     },
     {
-      "image": "https://example.com/course4.jpg",
+      "image": "https://i.ibb.co/WsJZh8H/approve9.jpg",
       "name": "Yin Yoga",
       "instructor": "Sarah Thompson",
       "seats": 8,
       "price": 45
     },
     {
-      "image": "https://example.com/course5.jpg",
+      "image": "https://i.ibb.co/VmrnkGC/approve4.jpg",
       "name": "Power Yoga",
       "instructor": "David Wilson",
       "seats": 15,
       "price": 65
     },
     {
-      "image": "https://example.com/course6.jpg",
+      "image": "https://i.ibb.co/N3x6skg/approve1.jpg",
       "name": "Restorative Yoga",
       "instructor": "Jennifer Miller",
       "seats": 12,
       "price": 55
     },
     {
-      "image": "https://example.com/course7.jpg",
+      "image": "https://i.ibb.co/YDJDzQy/approve3.jpg",
       "name": "Kundalini Yoga",
       "instructor": "Matthew Brown",
       "seats": 10,
       "price": 60
     },
     {
-      "image": "https://example.com/course8.jpg",
+      "image": "https://i.ibb.co/jVWKSCw/approve8.webp",
       "name": "Iyengar Yoga",
       "instructor": "Olivia Garcia",
       "seats": 8,
       "price": 50
     },
     {
-      "image": "https://example.com/course9.jpg",
+      "image": "https://i.ibb.co/nzXLqt4/approve7.jpg",
       "name": "Bikram Yoga",
       "instructor": "Daniel Rodriguez",
       "seats": 15,
       "price": 70
     },
     {
-      "image": "https://example.com/course10.jpg",
+      "image": "https://i.ibb.co/gJGdm1M/approve6.jpg",
       "name": "AcroYoga",
       "instructor": "Sophia Martinez",
       "seats": 12,
       "price": 65
     },
     {
-      "image": "https://example.com/course11.jpg",
+      "image": "https://i.ibb.co/ZM2dKfB/approve5.jpg",
       "name": "Yoga for Beginners",
       "instructor": "William Lee",
       "seats": 10,
       "price": 40
     },
     {
-      "image": "https://example.com/course12.jpg",
+      "image": "https://i.ibb.co/r4N9sw3/approve2.webp",
       "name": "Yoga for Kids",
       "instructor": "Ava Taylor",
       "seats": 8,
