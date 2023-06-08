@@ -10,7 +10,7 @@ const Navbar = () => {
     const navOption = <>
     <li><Link>Home</Link></li>
     <li><Link to='/instructor'>Instructors</Link></li>
-    <li><Link>Classes</Link></li>
+    <li><Link to='/classesPage'>Classes</Link></li>
     </>
 
     const handleLogout = () => {
@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="navbar-end ">
                 {
                     user ? <>
-                    <Link className="mr-2">Dashboard</Link>
+                    <Link to='/dashboard/myselectedclass' className="mr-2">Dashboard</Link>
                     <a className="btn"><FaUserAlt></FaUserAlt></a>
                     <Link><button onClick={handleLogout} className="btn btn-ghost btn-sm">Logout</button></Link>
                     </> : 
