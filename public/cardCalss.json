@@ -1,0 +1,87 @@
+[
+    {
+      "image": "https://example.com/course1.jpg",
+      "name": "Hatha Yoga",
+      "instructor": "John Smith",
+      "seats": 15,
+      "price": 50
+    },
+    {
+      "image": "https://example.com/course2.jpg",
+      "name": "Vinyasa Flow",
+      "instructor": "Emily Johnson",
+      "seats": 12,
+      "price": 60
+    },
+    {
+      "image": "https://example.com/course3.jpg",
+      "name": "Ashtanga Yoga",
+      "instructor": "Michael Davis",
+      "seats": 10,
+      "price": 55
+    },
+    {
+      "image": "https://example.com/course4.jpg",
+      "name": "Yin Yoga",
+      "instructor": "Sarah Thompson",
+      "seats": 8,
+      "price": 45
+    },
+    {
+      "image": "https://example.com/course5.jpg",
+      "name": "Power Yoga",
+      "instructor": "David Wilson",
+      "seats": 15,
+      "price": 65
+    },
+    {
+      "image": "https://example.com/course6.jpg",
+      "name": "Restorative Yoga",
+      "instructor": "Jennifer Miller",
+      "seats": 12,
+      "price": 55
+    },
+    {
+      "image": "https://example.com/course7.jpg",
+      "name": "Kundalini Yoga",
+      "instructor": "Matthew Brown",
+      "seats": 10,
+      "price": 60
+    },
+    {
+      "image": "https://example.com/course8.jpg",
+      "name": "Iyengar Yoga",
+      "instructor": "Olivia Garcia",
+      "seats": 8,
+      "price": 50
+    },
+    {
+      "image": "https://example.com/course9.jpg",
+      "name": "Bikram Yoga",
+      "instructor": "Daniel Rodriguez",
+      "seats": 15,
+      "price": 70
+    },
+    {
+      "image": "https://example.com/course10.jpg",
+      "name": "AcroYoga",
+      "instructor": "Sophia Martinez",
+      "seats": 12,
+      "price": 65
+    },
+    {
+      "image": "https://example.com/course11.jpg",
+      "name": "Yoga for Beginners",
+      "instructor": "William Lee",
+      "seats": 10,
+      "price": 40
+    },
+    {
+      "image": "https://example.com/course12.jpg",
+      "name": "Yoga for Kids",
+      "instructor": "Ava Taylor",
+      "seats": 8,
+      "price": 30
+    }
+  ]
+  
