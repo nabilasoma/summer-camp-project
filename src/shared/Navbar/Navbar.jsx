@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="navbar-end ">
                 {
                     user ? <>
-                    <Link to='/dashboard/myselectedclass' className="mr-2">Dashboard</Link>
+                    <Link to='/dashboard' className="mr-2">Dashboard</Link>
                     <a className="btn"><FaUserAlt></FaUserAlt></a>
                     <Link><button onClick={handleLogout} className="btn btn-ghost btn-sm">Logout</button></Link>
                     </> : 

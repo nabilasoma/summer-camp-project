@@ -23,7 +23,7 @@ const Dashboard = () => {
             <ul className="menu p-4 w-80 h-full bg-purple-200 text-purple-800 font-bold">
                 {isAdmin ? ( <>
                     <li><Link to='dashboard/studenthome' className="hover:bg-white"><FaHome></FaHome>Admin Home</Link></li>
-                     <li><Link to='/dashboard/myselectedclass' className="hover:bg-white"><FaSchool></FaSchool>Manage Classes</Link></li>
+                     <li><Link to='/dashboard/manageclasses' className="hover:bg-white"><FaSchool></FaSchool>Manage Classes</Link></li>
                      <li><Link to='/dashboard/allusers' className="hover:bg-white"><FaUsers></FaUsers>Manage Users</Link></li>
                 
                 </>
@@ -31,15 +31,15 @@ const Dashboard = () => {
                 ) : (
                     isInstructor ? ( <>
                         <li><Link to='dashboard/Instructorhome' className="hover:bg-white"><FaHome></FaHome>Instructor Home</Link></li>
-                        <li><Link to='/dashboard/' className="hover:bg-white"><FaSchool></FaSchool>Add Class</Link></li>
+                        <li><Link to='/dashboard/addaclass' className="hover:bg-white"><FaSchool></FaSchool>Add A Class</Link></li>
                         <li><Link to='/dashboard/' className="hover:bg-white"><FaUsers></FaUsers>My Classes</Link></li>
 
                     </>
                         
                     ) : ( <>
                      <li><Link to='dashboard/studenthome' className="hover:bg-white"><FaHome></FaHome>Student Home</Link></li>
-                        <li><Link to='/dashboard/myselectedclass' className="hover:bg-white"><FaSchool></FaSchool>Manage Classes</Link></li>
-                        <li><Link to='/dashboard/allusers' className="hover:bg-white"><FaUsers></FaUsers>Manage Users</Link></li>
+                        <li><Link to='/dashboard/myselectedclass' className="hover:bg-white"><FaSchool></FaSchool>My Selected Class</Link></li>
+                        <li><Link to='/dashboard/' className="hover:bg-white"><FaUsers></FaUsers>My Enrolled Class</Link></li>
                     
                     </>
                        
