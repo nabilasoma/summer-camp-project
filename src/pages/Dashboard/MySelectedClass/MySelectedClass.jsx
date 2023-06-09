@@ -8,7 +8,7 @@ const MySelectedClass = () => {
     console.log(selectedClass);
     const total = selectedClass.reduce((sum, item) => item.price + sum, 0)
 
-    const handleDelete = row => {
+    const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -19,7 +19,7 @@ const MySelectedClass = () => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/selectedClasses/${row._id}`, {
+                fetch(`http://localhost:4000/selectedClasses/${item._id}`, {
                     method: "DELETE"
                 })
                 .then(res => res.json())
@@ -58,23 +58,24 @@ const MySelectedClass = () => {
                     </thead>
                     <tbody>
                         {
-                            selectedClass.map((row, index) =>   <tr key={row._id}>
+                            selectedClass.map((item, index) =>   <tr key={item._id}>
                                 
                                 <td>{index + 1} </td>
                                 <td>
                                         <div className="avatar">
                                             <div className="mask mask-squircle w-12 h-12">
-                                                <img src={row.image} alt="Avatar Tailwind CSS Component" />
+                                                <img src={item.image} alt="Avatar Tailwind CSS Component" />
                                             </div>
                                         </div>
                                 </td>
                                 <td>
-                                    <span className="badge badge-ghost badge-sm font-bold">{row.name}</span>
+                                    <span className="badge badge-ghost badge-sm font-bold">{item.name}</span>
                                 </td>
-                                <td className="font-bold">${row.price}</td>
+                                <td className="font-bold">${item.price}</td>
                                 <th>
-                                    <button onClick={()=>handleDelete(row)} className="bg-purple-400 text-white btn btn-ghost btn-lg"><FaTrashAlt></FaTrashAlt></button>
+                                    <button onClick={()=>handleDelete(item)} className="bg-purple-400 text-white btn btn-ghost btn-lg"><FaTrashAlt></FaTrashAlt></button>
                                 </th>
+                               
                             </tr>)
                         }
                       

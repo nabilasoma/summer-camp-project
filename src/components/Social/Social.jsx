@@ -16,6 +16,20 @@ const Social = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser)
+            const saveUser = {name: loggedUser.displayName, email: loggedUser.email, photo: loggedUser.photoUrl}
+            fetch('http://localhost:4000/users', {
+                method: "POST",
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.insertedId){
+                    navigate(from, {replace: true})
+                }
+            })
             navigate(from, {replace: true})
 
         })
