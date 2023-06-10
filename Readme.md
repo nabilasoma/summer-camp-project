@@ -6,5 +6,6 @@
 - I have added Classes and Instructor pages,
 - Create Dashboard and shown three different board --- student, Instructor and Admin.
 - Created Login system by using firebase auth.
+- I have added @stripe/react-stripe-js, react-router-dom, react-query, react-transtaq-query, react-icons, firebase, axios, tailwind, daisy Ui, slick-carousel, carousel-slider, react-hook-form, sweet-alert2 etc.
 
 - here is my live site link--
