@@ -1,6 +1,7 @@
 import { FaTrashAlt } from "react-icons/fa";
 import useCart from "../../../hooks/useCart";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 
 const MySelectedClass = () => {
@@ -41,8 +42,8 @@ const MySelectedClass = () => {
         <div className="text-center w-full">
             <div className="flex justify-evenly items-center text-center gap-16 h-10">
                 <h3 className="text-xl font-bold text-green-500">Total Selected Class: {selectedClass.length}</h3>
-                <h3 className="text-xl font-bold text-green-500">Total price: ${total}</h3>
-                <button className="btn text-purple-800 font-bold btn-sm btn-success">Pay</button>
+                <h3 className="text-xl font-bold text-green-500">Total price: ${total.toFixed(2)}</h3>
+                
             </div>
             <div className="overflow-x-auto">
                 <table className="table font-bold">
@@ -53,6 +54,7 @@ const MySelectedClass = () => {
                             <th>Classes</th>
                             <th>Yoga Name</th>
                             <th>Price</th>
+                            <th>Pay</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -72,6 +74,7 @@ const MySelectedClass = () => {
                                     <span className="badge badge-ghost badge-sm font-bold">{item.name}</span>
                                 </td>
                                 <td className="font-bold">${item.price}</td>
+                                <td className="font-bold"><Link to='/dashboard/payment'><button className="btn text-purple-800 font-bold btn-sm btn-success">Pay</button></Link></td>
                                 <th>
                                     <button onClick={()=>handleDelete(item)} className="bg-purple-400 text-white btn btn-ghost btn-lg"><FaTrashAlt></FaTrashAlt></button>
                                 </th>
