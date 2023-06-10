@@ -2,9 +2,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import Swal from "sweetalert2";
 
-// const image_hosting_key = import.meta.env.VITE_IMAGE_UPLOAD_key;
+
 const AddAClass = () => {
-    // const image_hosting_url = `https://api.imgbb.com/1/upload?${image_hosting_key}`
+    
     const {user} = useContext(AuthContext);
     
 
@@ -68,16 +68,10 @@ const handleAddClass = event => {
     
     }
     
-   })
-//    .then(error => {
-//     console.log(error)
-//    })
-
+   });
 
    
-
-   
-}
+};
 
     return (
         <div className="w-full">
