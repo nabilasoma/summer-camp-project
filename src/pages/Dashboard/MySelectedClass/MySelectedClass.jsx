@@ -74,7 +74,7 @@ const MySelectedClass = () => {
                                     <span className="badge badge-ghost badge-sm font-bold">{item.name}</span>
                                 </td>
                                 <td className="font-bold">${item.price}</td>
-                                <td className="font-bold"><Link to='/dashboard/payment'><button className="btn text-purple-800 font-bold btn-sm btn-success">Pay</button></Link></td>
+                                <td className="font-bold"><Link  to={`/dashboard/payment/${item._id}`}><button  className="btn text-purple-800 font-bold btn-sm btn-success">Pay</button></Link></td>
                                 <th>
                                     <button onClick={()=>handleDelete(item)} className="bg-purple-400 text-white btn btn-ghost btn-lg"><FaTrashAlt></FaTrashAlt></button>
                                 </th>

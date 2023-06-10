@@ -70,7 +70,7 @@ const router = createBrowserRouter([
                 element: <MyEnrolled></MyEnrolled>
             }, 
             {
-                path: 'payment',
+                path: 'payment/:id',
                 element: <Payment></Payment>
             }
         ]

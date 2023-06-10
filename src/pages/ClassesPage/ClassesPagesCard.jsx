@@ -1,13 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import useInstructor from "../../hooks/useInstructor";
+import useAdmin from "../../hooks/useAdmin";
 
 
 const ClassesPagesCard = ({ myClass }) => {
     const { image, name, instructor, seats, price, _id } = myClass;
     console.log(myClass);
-    const {user} = useContext(AuthContext);
+    const [disabled, setDisabled] = useState(false);
+    const [isInstructor] = useInstructor();
+    const [isAdmin] = useAdmin();
+     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
  
@@ -16,6 +21,9 @@ const ClassesPagesCard = ({ myClass }) => {
    
     const handleAddToCart = myClass => {
         console.log(myClass)
+        if(isAdmin && isInstructor){
+            setDisabled(true);
+        }
         if(user && user.email){
             const selectedClass = {classId: _id, name, image, price, email: user?.email}
             fetch('http://localhost:4000/selectedClasses', {
@@ -68,7 +76,7 @@ const ClassesPagesCard = ({ myClass }) => {
                 <p className="font-bold">Total Seat: {seats}</p>
                 <p className="font-bold">Price: ${price}</p>
                 <div className="card-actions">
-                    <button onClick={()=>handleAddToCart(myClass)} className="btn btn-success">Select</button>
+                    <button disabled={false} onClick={()=>handleAddToCart(myClass)} className="btn btn-success">Select</button>
                 </div>
             </div>
         </div>
