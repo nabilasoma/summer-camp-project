@@ -40,6 +40,7 @@ const Dashboard = () => {
                      <li><Link to='dashboard/studenthome' className="hover:bg-white"><FaHome></FaHome>Student Home</Link></li>
                         <li><Link to='/dashboard/myselectedclass' className="hover:bg-white"><FaSchool></FaSchool>My Selected Class</Link></li>
                         <li><Link to='/dashboard/myenrolled' className="hover:bg-white"><FaUsers></FaUsers>My Enrolled Class</Link></li>
+                        <li><Link to='/dashboard/paymenthistory' className="hover:bg-white"><FaWallet></FaWallet>Payment History</Link></li>
                     
                     </>
                        

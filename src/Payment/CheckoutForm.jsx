@@ -2,9 +2,10 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { AuthContext } from "../provider/AuthProvider";
+import useCart from "../hooks/useCart";
 
 
-const CheckoutForm = ({price}) => {
+const CheckoutForm = ({id}) => {
 
     const stripe = useStripe();
     const elements = useElements();
@@ -13,15 +14,34 @@ const CheckoutForm = ({price}) => {
     const [cardError, setCardError] = useState(' ');
     const [clientSecret, setClientSecret] = useState(' ');
     const [processing, setProcessing] = useState(false);
-    const [transactionId, setTransactionId] = useState()
+    const [transactionId, setTransactionId] = useState();
+    const [singleData, setSingleData] = useState(null);
+    const[selectedClass] = useCart();
+   
 
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/selectedClasses/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            setSingleData(data)
+            console.log(data)
+        }
+       
+            )
+            
+     }, [id])
+
+const {price}= singleData || {};
 
     useEffect(()=> {
+      if(price > 0){
         axiosSecure.post('/create-payment-intent', {price})
         .then(res => {
             console.log(res.data.clientSecret)
             setClientSecret(res.data.clientSecret)
         })
+      }
     }, [price, axiosSecure])
 
 
@@ -75,7 +95,27 @@ const CheckoutForm = ({price}) => {
             setProcessing(false)
             if(paymentIntent.status === 'succeeded'){
                 setTransactionId(paymentMethod.id)
-                const transactionId = paymentIntent.id ;
+                // save payment information to the server
+                const payment = {
+                    
+                    email: user?.email, 
+                    transactionId: paymentMethod.id,
+                    price,
+                    date: new Date(),
+                    quantity: selectedClass.length,
+                    itemNames: selectedClass.map(item => item.name),
+                    items: selectedClass.map(item => item._id),
+                    classItems: selectedClass.map(item => item.classId)
+                }
+
+                axiosSecure.post('/payments', payment)
+                .then(res => {
+                    console.log(res.data)
+                    if(res.data.insertedId){
+                        alert('confirmed')
+                    }
+                })
+
             }
     }
 
