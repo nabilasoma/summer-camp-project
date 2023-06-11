@@ -107,13 +107,14 @@ const {price}= singleData || {};
                     quantity: selectedClass.length,
                     itemNames: selectedClass.map(item => item.name),
                     items: selectedClass.map(item => item._id),
+                    orderStatus: 'Service Pending',
                     classItems: selectedClass.map(item => item.classId)
                 }
 
                 axiosSecure.post('/payments', payment)
                 .then(res => {
                     console.log(res.data)
-                    if(res.data.insertedId){
+                    if(res.data.result.insertedId){
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
