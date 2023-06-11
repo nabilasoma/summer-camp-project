@@ -53,7 +53,7 @@ const AllUsers = () => {
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     {/* head */}
-                    <thead>
+                    <thead className='bg-purple-200'>
                         <tr>
                             <th>#</th>
                             <th>Name</th>

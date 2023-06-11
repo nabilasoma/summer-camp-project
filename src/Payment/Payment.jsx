@@ -2,7 +2,6 @@ import { loadStripe } from "@stripe/stripe-js";
 import CheckoutForm from "./CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { useParams } from "react-router-dom";
-import useCart from "../hooks/useCart";
 
 
 

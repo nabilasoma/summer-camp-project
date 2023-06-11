@@ -16,7 +16,7 @@ const Popular = () => {
 
     return (
         <div className="mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto container mb-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 mx-auto container mb-4 gap-10">
                 
             {
                 popularClass.slice(0, 6).map(singleData => <PopularCard key={singleData._id}
