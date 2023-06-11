@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from "react";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { AuthContext } from "../provider/AuthProvider";
 import useCart from "../hooks/useCart";
+import Swal from "sweetalert2";
+import './CheckOutForm.css'
 
 
 const CheckoutForm = ({id}) => {
@@ -112,7 +114,13 @@ const {price}= singleData || {};
                 .then(res => {
                     console.log(res.data)
                     if(res.data.insertedId){
-                        alert('confirmed')
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Payment Completed',
+                            showConfirmButton: false,
+                            timer: 1500
+                          })
                     }
                 })
 
