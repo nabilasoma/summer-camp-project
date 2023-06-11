@@ -15,7 +15,7 @@ const PopularCard = ({singleData}) => {
            <figure><img src={picture} alt="Shoes" /></figure>
             <div className="card-body">
            
-                <h2 className="card-title">
+                <h2 className="text-xl font-semibold text-red-700 text-center">
                     Total Students: {studentNumber}
                 </h2>
               

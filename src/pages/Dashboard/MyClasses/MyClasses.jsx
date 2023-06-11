@@ -8,7 +8,7 @@ const MyClasses = () => {
     console.log(selectedClass);
 
     useEffect(() => {
-        fetch('http://localhost:4000/addaclasses', {
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/addaclasses', {
             method: "GET"
         })
             .then(res => res.json())

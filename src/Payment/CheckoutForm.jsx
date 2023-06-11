@@ -23,7 +23,7 @@ const CheckoutForm = ({id}) => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:4000/selectedClasses/${id}`)
+        fetch(`https://summer-camp-server-nabilasoma.vercel.app/selectedClasses/${id}`)
         .then(res => res.json())
         .then(data => {
             setSingleData(data)

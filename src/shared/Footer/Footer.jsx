@@ -1,3 +1,5 @@
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import logo from '../../assets/images-removebg-preview.png'
 
 
 const Footer = () => {
@@ -6,16 +8,28 @@ const Footer = () => {
             <div className="container mx-auto px-4 py-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div>
-                        <img src="" alt="Logo" className="w-24" />
+                        <img src={logo} alt="Logo" className="w-24" />
                         <p className="mt-4 text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a lorem odio. Aliquam cursus ac lacus vel mattis.</p>
                     </div>
                     <div>
                         <h4 className="text-lg font-bold mb-4">Follow Us</h4>
-                        <ul className="flex space-x-4">
-                            <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-youtube"></i></a></li>
+                        <ul className="">
+                           <div className="flex items-center gap-2">
+                           <li><FaFacebook></FaFacebook></li> 
+                            <p> <small>Facebook</small></p>
+                           </div>
+                           <div className="flex items-center gap-2">
+                           <li><FaLinkedin></FaLinkedin></li>
+                            <p><small>Linkedin</small></p>
+                           </div>
+                            <div className="flex items-center gap-2">
+                            <li><FaInstagram></FaInstagram></li>
+                            <p><small>Instagram</small></p>
+                            </div>
+                           <div className="flex items-center gap-2">
+                           <li><FaTwitter></FaTwitter></li>
+                            <p><small>Twitter</small></p>
+                           </div>
                         </ul>
                     </div>
                     <div>
@@ -36,7 +50,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mt-8 text-center text-gray-400">
-                    &copy; 2023 Yoga Institute. All rights reserved.
+                    &copy; 2023 Spiritual Home. All rights reserved.
                 </div>
             </div>
         </footer>

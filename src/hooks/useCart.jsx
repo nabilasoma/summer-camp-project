@@ -11,7 +11,7 @@ const useCart = () => {
     const { isLoading, refetch, data: selectedClass = [] } = useQuery({
         queryKey: ['selectedClasses', user?.email],
         // queryFn: async() => {
-        //     const res = await fetch(`http://localhost:4000/selectedClasses?email=${user?.email}`, {
+        //     const res = await fetch(`https://summer-camp-server-nabilasoma.vercel.app/selectedClasses?email=${user?.email}`, {
         //         headers: {
         //             authorization: `bearer ${token}`
         //         }

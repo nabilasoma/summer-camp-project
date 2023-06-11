@@ -6,7 +6,7 @@ const ClassesPage = () => {
     const [myClasses, setMyClasses] = useState([]);
 
     useEffect(()=> {
-        fetch('http://localhost:4000/approveClasses', {
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/approveClasses', {
             method: "GET"
         })
         .then(res => res.json())

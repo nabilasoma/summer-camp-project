@@ -46,7 +46,7 @@ const handleAddClass = event => {
             status
         }
         
-        fetch('http://localhost:4000/addaclasses', {
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/addaclasses', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

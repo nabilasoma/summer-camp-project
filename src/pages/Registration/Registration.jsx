@@ -24,7 +24,7 @@ const Registration = () => {
                 updateUserProfile(data.name, data.photoUrl)
                     .then(() => {
                         const saveUser = {name: data.name, email: data.email, photo: data.photoUrl}
-                        fetch('http://localhost:4000/users', {
+                        fetch('https://summer-camp-server-nabilasoma.vercel.app/users', {
                             method: "POST",
                             headers: {
                                 'content-type': 'application/json'

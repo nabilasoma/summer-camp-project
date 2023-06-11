@@ -6,7 +6,7 @@ const ManageClasses = () => {
     const [items, setItems] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:4000/addaclasses', { method: "GET" })
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/addaclasses', { method: "GET" })
             .then(res => res.json())
             .then(data => {
                 setManageAdmin(data)

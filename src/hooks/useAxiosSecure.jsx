@@ -5,7 +5,7 @@ import { AuthContext } from '../provider/AuthProvider';
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:4000',
+    baseURL: 'https://summer-camp-server-nabilasoma.vercel.app',
 })
 
 const useAxiosSecure = () => {

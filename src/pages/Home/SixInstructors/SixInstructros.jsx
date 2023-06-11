@@ -6,7 +6,7 @@ const SixInstructros = () => {
     const [instructors, setInstructors] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/instructors', {
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/instructors', {
             method: "GET"
         })
         .then(res => res.json())
@@ -16,7 +16,7 @@ const SixInstructros = () => {
         <div>
             <h3 className="text-3xl font-bold text-red-800 text-center mt-8 mb-6">Our Popular Instructors</h3>
             <hr className="w-1/2 text-center mx-auto font-bold"/>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto container mt-8">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto container mt-8 gap-10">
            {
                 instructors.slice(0,6).map(instructor => <SixInstructorsCard key={instructor._id}
                 instructor={instructor}

@@ -7,7 +7,7 @@ const Popular = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:4000/classes', {
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/classes', {
             method: "GET"
         })
         .then(res => res.json())

@@ -5,7 +5,7 @@ const MyEnrolled = () => {
     const [myEnrolled, setMyEnrolled] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:4000/payments', {method: "GET"})
+        fetch('https://summer-camp-server-nabilasoma.vercel.app/payments', {method: "GET"})
         .then(res => res.json())
         .then(data => {
             setMyEnrolled(data)

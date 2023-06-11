@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/images-removebg-preview.png'
 import { FaUserAlt } from 'react-icons/fa';
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
+    
 
     const {user, logOut} = useContext(AuthContext);
     const navOption = <>
@@ -22,6 +23,8 @@ const Navbar = () => {
             console.log(error)
         })
     }
+
+   
     return (
        <div className=" mx-auto">
          <div className="navbar fixed bg-black bg-opacity-20 text-white font-bold z-10">
@@ -52,6 +55,7 @@ const Navbar = () => {
                     <Link><button onClick={handleLogout} className="btn btn-ghost btn-sm">Logout</button></Link>
                     </> : 
                    <Link to='/login'> <button className="btn btn-ghost btn-sm">Login</button></Link>
+                 
                 }
                 
                 {/* <img style={{widows: '20px', height: '20px'}} src= alt="" /> */}

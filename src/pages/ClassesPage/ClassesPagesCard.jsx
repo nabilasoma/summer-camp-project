@@ -26,7 +26,7 @@ const ClassesPagesCard = ({ myClass }) => {
         }
         if(user && user.email){
             const selectedClass = {classId: _id, name, image, price, email: user?.email}
-            fetch('http://localhost:4000/selectedClasses', {
+            fetch('https://summer-camp-server-nabilasoma.vercel.app/selectedClasses', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
