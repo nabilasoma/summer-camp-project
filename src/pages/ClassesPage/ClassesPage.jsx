@@ -15,8 +15,8 @@ const ClassesPage = () => {
     }, [])
     return (
         <div className="">
-            <h2>All Classes : {myClasses.length}</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto">
+            
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container mx-auto gap-10">
            {
                 myClasses.map(myClass => <ClassesPagesCard key={myClass._id}
                 

@@ -5,6 +5,9 @@ const ManageClasses = () => {
     const [manageAdmin, setManageAdmin] = useState([]);
     const [status, setStatus] = useState('Pending');
     const [isDisabled, setIsDisabled] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
 
     useEffect(() => {
         fetch('https://summer-camp-server-nabilasoma.vercel.app/addaclasses', { method: "GET" })
@@ -14,10 +17,12 @@ const ManageClasses = () => {
             })
     }, [])
 
-const handlePending = () => {
-    setStatus('Pending');
-    setIsDisabled(true);
-}
+
+
+    const handlePending = () => {
+        setStatus('Pending');
+        setIsDisabled(true);
+    }
 
     const handleApprove = () => {
         setStatus('Approved');
@@ -71,24 +76,21 @@ const handlePending = () => {
                             <td>
                                 <button onClick={handleApprove} disabled={isDisabled} className="text-green-500 btn btn-xs">Approve</button>
                                 <button onClick={handleDeny} disabled={isDisabled} className="text-red-600 mt-0 btn btn-xs">Deny</button>
-                                {/* <button
+                                <button
 
                              className="text-yellow-600 odd:mt-0 btn btn-xs">
                                 Feedback
-                                </button> */}
+                                </button> 
 
-                                {/* Open the modal using ID.showModal() method */}
-                                <button className="btn btn-xs" onClick={() => window.my_modal_2.showModal()}>Feedback</button>
-                                <dialog id="my_modal_2" className="modal">
+                                {/* You can open the modal using ID.showModal() method */}
+                                {/* <button className="btn" onClick={() => window.my_modal_3.showModal}>open modal</button>
+                                <dialog id="my_modal_3" className="modal">
                                     <form method="dialog" className="modal-box">
+                                        <button htmlFor="my-modal-3" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                                         <h3 className="font-bold text-lg">Hello!</h3>
-                                        <p className="py-4">Press ESC key or click outside to close</p>
+                                        <p className="py-4">Press ESC key or click on ✕ button to close</p>
                                     </form>
-                                    <form method="dialog" className="modal-backdrop">
-                                        <button>close</button>
-                                    </form>
-                                </dialog>
-
+                                </dialog> */}
 
                             </td>
                         </tr>)}

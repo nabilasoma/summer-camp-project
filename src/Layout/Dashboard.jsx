@@ -48,8 +48,6 @@ const Dashboard = () => {
                 )}
                  <div className="divider"></div>
                     <li><Link to='/' className="hover:bg-white"><FaHome></FaHome>Home</Link></li>
-                    <li><Link to='/' className="hover:bg-white"><FaHome></FaHome>Home</Link></li>
-                    <li><Link to='/' className="hover:bg-white"><FaHome></FaHome>Home</Link></li>
              </ul>
             </div>
         </div>

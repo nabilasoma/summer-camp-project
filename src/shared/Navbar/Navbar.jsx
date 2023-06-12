@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/images-removebg-preview.png'
 import { FaUserAlt } from 'react-icons/fa';
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
