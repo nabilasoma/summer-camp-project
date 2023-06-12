@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 const ManageClasses = () => {
     const [manageAdmin, setManageAdmin] = useState([]);
-    const [items, setItems] = useState(false);
+    const [status, setStatus] = useState('Pending');
+    const [isDisabled, setIsDisabled] = useState(false);
 
     useEffect(() => {
         fetch('https://summer-camp-server-nabilasoma.vercel.app/addaclasses', { method: "GET" })
@@ -13,10 +14,20 @@ const ManageClasses = () => {
             })
     }, [])
 
- 
-const handleApprove = () => {
-    setItems(true)
+const handlePending = () => {
+    setStatus('Pending');
+    setIsDisabled(true);
 }
+
+    const handleApprove = () => {
+        setStatus('Approved');
+        setIsDisabled(true);
+    };
+
+    const handleDeny = () => {
+        setStatus('Denied');
+        setIsDisabled(true);
+    };
 
 
     return (
@@ -54,13 +65,31 @@ const handleApprove = () => {
                             <td>{item.email}</td>
                             <td>{item.seats}</td>
                             <td>{item.price}</td>
-                            <td><button className="btn btn-xs" onClick={()=>handleApprove(item._id)}>
-                            {items ? 'Pending' : 'Approve'}
-                                </button></td>
+                            <td><button onClick={handlePending} disabled={isDisabled} className="btn btn-xs" >
+                                Pending
+                            </button></td>
                             <td>
-                            <button className="text-green-500 btn btn-xs">Approve</button>
-                            <button className="text-red-600 mt-0 btn btn-xs">Deny</button>
-                            <button className="text-yellow-600 odd:mt-0 btn btn-xs">Pending</button>
+                                <button onClick={handleApprove} disabled={isDisabled} className="text-green-500 btn btn-xs">Approve</button>
+                                <button onClick={handleDeny} disabled={isDisabled} className="text-red-600 mt-0 btn btn-xs">Deny</button>
+                                {/* <button
+
+                             className="text-yellow-600 odd:mt-0 btn btn-xs">
+                                Feedback
+                                </button> */}
+
+                                {/* Open the modal using ID.showModal() method */}
+                                <button className="btn btn-xs" onClick={() => window.my_modal_2.showModal()}>Feedback</button>
+                                <dialog id="my_modal_2" className="modal">
+                                    <form method="dialog" className="modal-box">
+                                        <h3 className="font-bold text-lg">Hello!</h3>
+                                        <p className="py-4">Press ESC key or click outside to close</p>
+                                    </form>
+                                    <form method="dialog" className="modal-backdrop">
+                                        <button>close</button>
+                                    </form>
+                                </dialog>
+
+
                             </td>
                         </tr>)}
 
