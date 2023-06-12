@@ -24,6 +24,7 @@ const CheckoutForm = ({id}) => {
 
     useEffect(() => {
         fetch(`https://summer-camp-server-nabilasoma.vercel.app/selectedClasses/${id}`)
+        // fetch(`http://localhost:4000/selectedClasses/${id}`)
         .then(res => res.json())
         .then(data => {
             setSingleData(data)
@@ -33,6 +34,8 @@ const CheckoutForm = ({id}) => {
             )
             
      }, [id])
+
+     
 
 const {price}= singleData || {};
 
@@ -109,6 +112,7 @@ const {price}= singleData || {};
                     items: selectedClass.map(item => item._id),
                     orderStatus: 'Service Pending',
                     classItems: selectedClass.map(item => item.classId)
+                    // classItems: singleData
                 }
 
                 axiosSecure.post('/payments', payment)
