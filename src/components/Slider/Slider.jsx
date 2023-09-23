@@ -5,8 +5,11 @@ const Slider = () => {
     return (
         <Carousel>
                  <div>
-                    <img src="https://i.ibb.co/1rSTsfJ/banner00.png" />
+                    <img src="https://i.ibb.co/1rSTsfJ/banner00.png" 
+                    
+                    />
                     {/* <p className="legend">Legend 1</p> */}
+                  
                  </div>  
                 <div>
                     <img src="https://i.ibb.co/YQ4805Z/banner000.png" />

@@ -5,6 +5,7 @@ import Slider from "../components/Slider/Slider";
 import SixInstructros from "../pages/Home/SixInstructors/SixInstructros";
 import Footer from "../shared/Footer/Footer";
 import Navbar from "../shared/Navbar/Navbar";
+import OurInstitute from "../components/Popular/OurInstitute";
 
 
 const HomePage = () => {
@@ -20,6 +21,7 @@ const HomePage = () => {
                 <Navbar></Navbar>
                 <Slider></Slider>
                 <Popular></Popular>
+                <OurInstitute></OurInstitute>
                 <SixInstructros></SixInstructros>
                 <AboutUs></AboutUs>
                 <Footer></Footer>
